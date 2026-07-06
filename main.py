@@ -20,15 +20,6 @@ class CreateShipment(BaseModel):
     status: str = Field(default="PREPARING")
 
 
-class ShipmentOut(BaseModel):
-    id: int
-    tracking_number: str
-    status: str
-
-    class Config:
-        from_attributes = True
-
-
 class BaseResponse(BaseModel):
     status_code: int
     message: str
